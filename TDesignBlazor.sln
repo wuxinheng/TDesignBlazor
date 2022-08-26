@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32611.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7458D8A8-BF8D-44C4-9EED-ABB8871178A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDesignBlazor", "TDesignBlazor\TDesignBlazor.csproj", "{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4} = {7458D8A8-BF8D-44C4-9EED-ABB8871178A4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7DBFC7A-2E65-435E-85E2-D16E5440343A}
+	EndGlobalSection
+EndGlobal
