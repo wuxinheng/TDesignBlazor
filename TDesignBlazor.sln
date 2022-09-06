@@ -5,23 +5,23 @@ VisualStudioVersion = 17.3.32611.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7458D8A8-BF8D-44C4-9EED-ABB8871178A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDesignBlazor", "TDesignBlazor\TDesignBlazor.csproj", "{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{EC1DFCFD-DAD2-4E32-B82E-20ACD655F353}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyApp.Server", "BlazorWebAssemblyApp\Server\BlazorWebAssemblyApp.Server.csproj", "{FB0C041F-08A5-4325-852C-7007919FB4CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp.Server", "BlazorWebAssemblyApp\Server\BlazorWebAssemblyApp.Server.csproj", "{FB0C041F-08A5-4325-852C-7007919FB4CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyApp.Client", "BlazorWebAssemblyApp\Client\BlazorWebAssemblyApp.Client.csproj", "{354468F2-ECDC-44C6-B73E-59F4610E17A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp.Client", "BlazorWebAssemblyApp\Client\BlazorWebAssemblyApp.Client.csproj", "{354468F2-ECDC-44C6-B73E-59F4610E17A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyApp.Shared", "BlazorWebAssemblyApp\Shared\BlazorWebAssemblyApp.Shared.csproj", "{A7040976-B49D-49DC-87D9-4384F58E97FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp.Shared", "BlazorWebAssemblyApp\Shared\BlazorWebAssemblyApp.Shared.csproj", "{A7040976-B49D-49DC-87D9-4384F58E97FC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorWebAssembly", "BlazorWebAssembly", "{D96A217E-9D43-4C2D-AA82-E0576A4DE3AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{5A3ADE26-3007-40AC-9362-D4352B9F90B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{5A3ADE26-3007-40AC-9362-D4352B9F90B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorServer", "BlazorServer", "{0A40B306-4DB9-47C1-91FF-305FE25631EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDesignBlazor.5x", "TDesignBlazor.5x\TDesignBlazor.5x.csproj", "{4BCDF14C-0956-4F34-8C03-6F856F5547DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDesignBlazor.5x", "src\TDesignBlazor.5x\TDesignBlazor.5x.csproj", "{F282A937-6CAF-406C-982D-822524571B49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDesignBlazor.6x", "src\TDesignBlazor.6x\TDesignBlazor.6x.csproj", "{7C1A63E1-E179-4509-A773-7F71A78E2853}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FB0C041F-08A5-4325-852C-7007919FB4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FB0C041F-08A5-4325-852C-7007919FB4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB0C041F-08A5-4325-852C-7007919FB4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,23 +45,27 @@ Global
 		{5A3ADE26-3007-40AC-9362-D4352B9F90B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A3ADE26-3007-40AC-9362-D4352B9F90B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A3ADE26-3007-40AC-9362-D4352B9F90B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4BCDF14C-0956-4F34-8C03-6F856F5547DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BCDF14C-0956-4F34-8C03-6F856F5547DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BCDF14C-0956-4F34-8C03-6F856F5547DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BCDF14C-0956-4F34-8C03-6F856F5547DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F282A937-6CAF-406C-982D-822524571B49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F282A937-6CAF-406C-982D-822524571B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F282A937-6CAF-406C-982D-822524571B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F282A937-6CAF-406C-982D-822524571B49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C1A63E1-E179-4509-A773-7F71A78E2853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1A63E1-E179-4509-A773-7F71A78E2853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1A63E1-E179-4509-A773-7F71A78E2853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C1A63E1-E179-4509-A773-7F71A78E2853}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9CE3FE24-BC56-4222-BB9F-E625E45FBEA4} = {7458D8A8-BF8D-44C4-9EED-ABB8871178A4}
 		{FB0C041F-08A5-4325-852C-7007919FB4CF} = {D96A217E-9D43-4C2D-AA82-E0576A4DE3AF}
 		{354468F2-ECDC-44C6-B73E-59F4610E17A5} = {D96A217E-9D43-4C2D-AA82-E0576A4DE3AF}
 		{A7040976-B49D-49DC-87D9-4384F58E97FC} = {D96A217E-9D43-4C2D-AA82-E0576A4DE3AF}
 		{D96A217E-9D43-4C2D-AA82-E0576A4DE3AF} = {EC1DFCFD-DAD2-4E32-B82E-20ACD655F353}
 		{5A3ADE26-3007-40AC-9362-D4352B9F90B6} = {0A40B306-4DB9-47C1-91FF-305FE25631EE}
 		{0A40B306-4DB9-47C1-91FF-305FE25631EE} = {EC1DFCFD-DAD2-4E32-B82E-20ACD655F353}
-		{4BCDF14C-0956-4F34-8C03-6F856F5547DC} = {7458D8A8-BF8D-44C4-9EED-ABB8871178A4}
+		{F282A937-6CAF-406C-982D-822524571B49} = {7458D8A8-BF8D-44C4-9EED-ABB8871178A4}
+		{7C1A63E1-E179-4509-A773-7F71A78E2853} = {7458D8A8-BF8D-44C4-9EED-ABB8871178A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7DBFC7A-2E65-435E-85E2-D16E5440343A}
