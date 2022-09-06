@@ -22,10 +22,11 @@ namespace TDesignBlazor._6x.Component
 
         protected override void OnInitialized()
         {
-            Class = "";
-            Style = "color:red;";
-            Text = "1234";
             base.OnInitialized();
+        }
+        public void OnClick()
+        {
+
         }
     }
 }
