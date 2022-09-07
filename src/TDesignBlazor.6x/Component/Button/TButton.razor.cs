@@ -79,6 +79,10 @@ namespace TDesignBlazor._6x.Component
         [Parameter]
         public string Variant { get; set; } = "base";
         [Parameter]
-        public Action OnClick { get; set; }
+        public string OnClick { get; set; }
+
+        [Parameter]
+
+        public RenderFragment ChildContent { get; set; }
     }
 }
