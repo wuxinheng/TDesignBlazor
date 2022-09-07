@@ -9,11 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <Compile Remove="Core\Base\Interface\**" />
+    <Content Remove="Core\Base\Interface\**" />
+    <EmbeddedResource Remove="Core\Base\Interface\**" />
+    <None Remove="Core\Base\Interface\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\Base\Interface\" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
 
