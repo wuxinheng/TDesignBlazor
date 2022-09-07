@@ -1,0 +1,17 @@
+﻿@namespace TDesignBlazor._6x.Component
+<div class="t-space t-space-@Direction" style="gap: 16px; width: 100%; text-align: @Align;">@ChildContent</div>
+
+@code {
+    [Parameter]
+    public string Align { get; set; } = "center";
+    [Parameter]
+    public bool BreakLine { get; set; } = false;
+    [Parameter]
+    public object Direction { get; set; } = "horizontal";
+    [Parameter]
+    public int Separator { get; set; }
+    [Parameter]
+    public string Size { get; set; } = "medium";
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
