@@ -7,17 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7458D8A8-BF8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{EC1DFCFD-DAD2-4E32-B82E-20ACD655F353}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp.Server", "BlazorWebAssemblyApp\Server\BlazorWebAssemblyApp.Server.csproj", "{FB0C041F-08A5-4325-852C-7007919FB4CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp.Server", "samples\BlazorWebAssemblyApp\Server\BlazorWebAssemblyApp.Server.csproj", "{FB0C041F-08A5-4325-852C-7007919FB4CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp.Client", "BlazorWebAssemblyApp\Client\BlazorWebAssemblyApp.Client.csproj", "{354468F2-ECDC-44C6-B73E-59F4610E17A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp.Client", "samples\BlazorWebAssemblyApp\Client\BlazorWebAssemblyApp.Client.csproj", "{354468F2-ECDC-44C6-B73E-59F4610E17A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp.Shared", "BlazorWebAssemblyApp\Shared\BlazorWebAssemblyApp.Shared.csproj", "{A7040976-B49D-49DC-87D9-4384F58E97FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp.Shared", "samples\BlazorWebAssemblyApp\Shared\BlazorWebAssemblyApp.Shared.csproj", "{A7040976-B49D-49DC-87D9-4384F58E97FC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorWebAssembly", "BlazorWebAssembly", "{D96A217E-9D43-4C2D-AA82-E0576A4DE3AF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorWebAssembly", "samples\BlazorWebAssembly", "{D96A217E-9D43-4C2D-AA82-E0576A4DE3AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{5A3ADE26-3007-40AC-9362-D4352B9F90B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerApp", "samples\BlazorServerApp\BlazorServerApp.csproj", "{5A3ADE26-3007-40AC-9362-D4352B9F90B6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorServer", "BlazorServer", "{0A40B306-4DB9-47C1-91FF-305FE25631EE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorServer", "samples\BlazorServer", "{0A40B306-4DB9-47C1-91FF-305FE25631EE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDesignBlazor.5x", "src\TDesignBlazor.5x\TDesignBlazor.5x.csproj", "{F282A937-6CAF-406C-982D-822524571B49}"
 EndProject
