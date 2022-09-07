@@ -3,11 +3,14 @@
 <h1>Button</h1>
 
 
+<h4>测试</h4>
 <TCard>
     <TSpace>
         <TButton>确定</TButton>
-        </TSpace>
+    </TSpace>
 </TCard>
+
+<h4>基础按钮</h4>
 <TCard>
     <TSpace>
         <TButton Theme="default" Variant="base">填充按钮</TButton>
@@ -17,8 +20,26 @@
     </TSpace>
 </TCard>
 
-
-
+<h4>图标按钮</h4>
+<TCard>
+    <TSpace>
+<TButton Theme="primary">
+      <add-icon slot="icon" />
+      新建
+    </TButton>
+    <TButton Variant="outline">
+      <cloud-upload-icon slot="icon" />
+      上传文件
+    </TButton>
+    <TButton Shape="circle" Theme="primary">
+      <discount-icon slot="icon" />
+    </TButton>
+    <TButton Shape="circle" Theme="primary">
+      <cloud-download-icon slot="icon" />
+    </TButton>
+    <TButton Variant="outline"> 搜索</TButton>
+    </TSpace>
+</TCard>
 
 
 <div>
