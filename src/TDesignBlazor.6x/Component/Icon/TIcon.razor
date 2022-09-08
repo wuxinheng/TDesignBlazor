@@ -1,0 +1,24 @@
+﻿@namespace TDesignBlazor._6x.Component
+<svg fill="none" viewBox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-@Name" style="z-index: 1;">
+<path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9">
+    </path>
+</svg>
+
+
+
+
+@code {
+    [Parameter]
+    public bool LoadDefaultIcons { get; set; } = true;
+    [Parameter]
+    public string Name { get; set; }
+    [Parameter]
+    public string Size { get; set; } = "undefined";
+    [Parameter]
+    public string Style { get; set; }
+    [Parameter]
+    public string Url { get; set; }
+    [Parameter]
+    public Action OnClick { get; set; }
+   
+}
