@@ -12,7 +12,7 @@ namespace TDesignBlazor._6x.Component
         /// 是否为块级元素
         /// </summary>
         [Parameter]
-        public bool Block { get; set; }=false;
+        public bool Block { get; set; } = false;
         /// <summary>
         /// 按钮内容
         /// </summary>
@@ -32,7 +32,7 @@ namespace TDesignBlazor._6x.Component
         /// 是否为幽灵按钮（镂空按钮）
         /// </summary>
         [Parameter]
-        public bool Ghost { get; set; }=false ;
+        public bool Ghost { get; set; } = false;
         /// <summary>
         /// 跳转地址。href 存在时，按钮标签默认使用 <a> 渲染；如果指定了 tag 则使用指定的标签渲染
         /// </summary>
@@ -82,7 +82,6 @@ namespace TDesignBlazor._6x.Component
         public string OnClick { get; set; }
 
         [Parameter]
-
         public RenderFragment ChildContent { get; set; }
     }
 }
