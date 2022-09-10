@@ -19,10 +19,6 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Component\Menu\" />
-  </ItemGroup>
-
 
 
 </Project>
