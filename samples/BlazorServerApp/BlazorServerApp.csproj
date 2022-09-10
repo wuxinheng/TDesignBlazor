@@ -12,6 +12,10 @@
     <ProjectReference Include="..\..\src\TDesignBlazor.6x\TDesignBlazor.6x.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\tdesign-vue%400.46.4\dist\" />
+  </ItemGroup>
+
 
 
 </Project>
