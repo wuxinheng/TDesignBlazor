@@ -3,6 +3,8 @@
     var _size = string.IsNullOrEmpty(Size) ? "m" : Size.Substring(0, 1);
     var _tag = "button";
     var _href = "#";
+    var _disabled = "";
+    var _disabledStyle = "";
     if (!string.IsNullOrEmpty(Href))
     {
         _tag = "a";
@@ -17,18 +19,57 @@
     {
         hrefString = "";
     }
-    
+
+    if (Disabled)
+    {
+        _disabled = "disabled";
+        _disabledStyle = "t-is-disabled";
+    }
+    RenderFragment content = builder =>
+    {
+        //if (Tag.ToLower() != "a" && !string.IsNullOrEmpty(Href)) { 
+        
+        //}
+        //if (Tag.ToLower() != "a" && !string.IsNullOrEmpty(Href))
+        //{
+
+        //}
+
+        builder.OpenElement(0, $"{Tag}");
+        builder.AddAttribute(1, "type", $"{Type}");
+        builder.AddAttribute(2, "class", $"t-button t-size-{Size.First()} t-button--variant-{Variant} t-button--theme-primary t-button--shape-{Shape} {_disabledStyle}");
+        if (Disabled)
+        {
+            builder.AddAttribute(3, "disabled", $"{_disabled}");
+        }
+        if (!string.IsNullOrEmpty(Tag) && Tag.ToLower() == "a")
+        {
+            if (!string.IsNullOrEmpty(Href))
+            {
+                builder.AddAttribute(2, "href", $"{_href}");
+            }
+
+        }
+
+        builder.OpenElement(4, "span");
+        builder.AddAttribute(5, "class", "t-button__text");
+        builder.AddContent(6, ChildContent);
+        builder.CloseElement();
+        builder.CloseElement();
+    };
 }
-@if (Disabled)
+@content
+@*@if (Disabled)
 {
-    <button type="@Type" class="t-button t-size-@_size t-button--variant-@Variant t-button--theme-primary t-button--shape-@Shape t-is-disabled" disabled="disabled" onclick="@OnClick">
-        <span class="t-button__text">@ChildContent</span>
-    </button>
+        <button type="@Type" class="t-button t-size-@_size t-button--variant-@Variant t-button--theme-primary t-button--shape-@Shape t-is-disabled" disabled="disabled" onclick="@OnClick">
+            <span class="t-button__text">@ChildContent</span>
+        </button>
 }
 else
 {
-    <button type="@Type" class="t-button t-size-@_size t-button--variant-@Variant t-button--theme-primary t-button--shape-@Shape" onclick="@OnClick">
-        <span class="t-button__text">@ChildContent</span>
-    </button>
-}
+        <button type="@Type" class="t-button t-size-@_size t-button--variant-@Variant t-button--theme-primary t-button--shape-@Shape" onclick="@OnClick">
+            <span class="t-button__text">@ChildContent</span>
+        </button>
+}*@
 
+@*@((MarkupString)MyProperty)*@

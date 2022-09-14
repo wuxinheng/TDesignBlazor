@@ -63,7 +63,7 @@ namespace TDesignBlazor._6x.Component
         /// 渲染按钮的 HTML 标签，默认使用标签 <button> 渲染，可以自定义为 <a> <div> 等。透传全部 HTML 属性，如：href/target/data-* 等。⚠️ 禁用按钮 <button disabled>无法显示 Popup 浮层信息，可通过修改 tag=div 解决这个问题。可选项：button/a/div
         /// </summary>
         [Parameter]
-        public string Tag { get; set; }
+        public string Tag { get; set; } = "button";
         /// <summary>
         /// 组件风格，依次为默认色、品牌色、危险色、警告色、成功色。可选项：default/primary/danger/warning/success
         /// </summary>
@@ -88,43 +88,8 @@ namespace TDesignBlazor._6x.Component
 
         protected override void OnInitialized()
         {
-            var _size = string.IsNullOrEmpty(Size) ? "m" : Size.Substring(0, 1);
-            var _tag = "button";
-            var _href = "#";
-            var _disabled = "";
-            var _disabledStyle = ""; 
-            if (!string.IsNullOrEmpty(Href))
-            {
-                _tag = "a";
-                _href = Href;
-            }
-            if (!string.IsNullOrEmpty(Tag))
-            {
-                _tag = Tag;
-            }
-            var hrefString = $"href='{_href}'";
-            if (_tag != "a")
-            {
-                hrefString = "";
-            }
-            if (Disabled)
-            {
-                _disabled = "disabled=\"disabled\"";
-                _disabledStyle = "t-is-disabled";
-            }
-
-            var strVar = $"";
-            strVar += $"<button type=\"{Type}\" class=\"t-button t-size-{_size} t-button--variant-{Variant} t-button--theme-primary t-button--shape-{Shape} {_disabledStyle} \" {_disabled}  onclick=\"{OnClick}\">";
-            strVar += $"   <span class=\"t-button__text\">{ChildContent}</span>";
-            strVar += $"</button>";
-
-        
             base.OnInitialized();
-
-
-            
         }
-
 
     }
 
