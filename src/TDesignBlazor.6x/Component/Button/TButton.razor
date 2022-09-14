@@ -1,5 +1,34 @@
 ﻿@namespace TDesignBlazor._6x.Component
+@{
+    var _size = string.IsNullOrEmpty(Size) ? "m" : Size.Substring(0, 1);
+    var _tag = "button";
+    var _href = "#";
+    if (!string.IsNullOrEmpty(Href))
+    {
+        _tag = "a";
+        _href = Href;
+    }
+    if (!string.IsNullOrEmpty(Tag))
+    {
+        _tag = Tag;
+    }
+    var hrefString = $"href='{_href}'";
+    if (_tag != "a")
+    {
+        hrefString = "";
+    }
+    
+}
+@if (Disabled)
+{
+    <button type="@Type" class="t-button t-size-@_size t-button--variant-@Variant t-button--theme-primary t-button--shape-@Shape t-is-disabled" disabled="disabled" onclick="@OnClick">
+        <span class="t-button__text">@ChildContent</span>
+    </button>
+}
+else
+{
+    <button type="@Type" class="t-button t-size-@_size t-button--variant-@Variant t-button--theme-primary t-button--shape-@Shape" onclick="@OnClick">
+        <span class="t-button__text">@ChildContent</span>
+    </button>
+}
 
-<button type="@Type" class="t-button t-size-m t-button--variant-@Variant t-button--theme-primary" onclick="@OnClick">
-    <span class="t-button__text">@ChildContent</span>
-</button>

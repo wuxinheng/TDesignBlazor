@@ -1,10 +1,27 @@
 ﻿@namespace TDesignBlazor._6x.Component
 
-<div class="t-card t-card--bordered">@ChildContent</div>
+<div class="t-card t-card--bordered">
+    @if (!string.IsNullOrEmpty(Title))
+    {
+        <div class="t-card__header">
+            <div class="t-card__header-wrapper">
+                <div>
+                    <span class="t-card__title">@Title</span>
+                </div>
+            </div>
+            <div class="t-card__actions">
+                @Actions
+            </div>
+        </div>
+    }
+    <div class="t-card__body">
+        @ChildContent
+    </div>
+</div>
 
 @code {
     [Parameter]
-    public string Actions { get; set; } = "center";
+    public string Actions { get; set; }
     [Parameter]
     public string Avatar { get; set; }
     [Parameter]

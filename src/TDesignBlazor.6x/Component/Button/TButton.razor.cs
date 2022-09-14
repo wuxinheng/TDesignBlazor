@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Rendering;
 
 using System;
 using System.Collections.Generic;
@@ -83,5 +84,48 @@ namespace TDesignBlazor._6x.Component
 
         [Parameter]
         public RenderFragment ChildContent { get; set; }
+
+
+        protected override void OnInitialized()
+        {
+            var _size = string.IsNullOrEmpty(Size) ? "m" : Size.Substring(0, 1);
+            var _tag = "button";
+            var _href = "#";
+            var _disabled = "";
+            var _disabledStyle = ""; 
+            if (!string.IsNullOrEmpty(Href))
+            {
+                _tag = "a";
+                _href = Href;
+            }
+            if (!string.IsNullOrEmpty(Tag))
+            {
+                _tag = Tag;
+            }
+            var hrefString = $"href='{_href}'";
+            if (_tag != "a")
+            {
+                hrefString = "";
+            }
+            if (Disabled)
+            {
+                _disabled = "disabled=\"disabled\"";
+                _disabledStyle = "t-is-disabled";
+            }
+
+            var strVar = $"";
+            strVar += $"<button type=\"{Type}\" class=\"t-button t-size-{_size} t-button--variant-{Variant} t-button--theme-primary t-button--shape-{Shape} {_disabledStyle} \" {_disabled}  onclick=\"{OnClick}\">";
+            strVar += $"   <span class=\"t-button__text\">{ChildContent}</span>";
+            strVar += $"</button>";
+
+        
+            base.OnInitialized();
+
+
+            
+        }
+
+
     }
+
 }
