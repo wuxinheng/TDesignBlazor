@@ -3,87 +3,67 @@
 
     RenderFragment content = builder =>
     {
-        if (!string.IsNullOrEmpty(Href))
-        {
-            if (Tag == "a" || Tag == "button")
-            {
-                Tag = "a";
-                builder.OpenElement(0, $"{Tag}");
-                builder.AddAttribute(2, "href", $"{Href}");
-            }
-            else
-            {
-                builder.OpenElement(0, $"{Tag}");
-            }
-        }
-        else
-        {
-            builder.OpenElement(0, $"{Tag}");
-        }
+        var classString = "";
+        classString = $"t-button t-size-{Size.First()} t-button--variant-{Variant} t-button--theme-primary t-button--shape-{Shape} ";
 
-
-        var classString = $"t-button t-size-{Size.First()} t-button--variant-{Variant} t-button--theme-primary t-button--shape-{Shape} ";
-
-        builder.AddAttribute(1, "type", $"{Type}");
+        if (!string.IsNullOrEmpty(Href) && ((Tag == "a" || Tag == "button")))
+            Tag = "a";
+        
         if (Disabled)
-        {
             classString += "t-is-disabled";
-            builder.AddAttribute(3, "disabled", $"disabled");
-        }
+
         if (Block)
             classString += "t-size-full-width ";
 
         if (Ghost)
-        {
             classString += "t-button--ghost ";
-        }
 
         if (Loading)
-{
             classString += " t-is-loading ";
-            builder.OpenElement(4, "div");
-            builder.AddAttribute(2, "class", "t-loading--center t-size-m t-loading--inherit-color t-loading");
 
-            builder.OpenElement(4, "svg");
+
+        builder.OpenElement(0, $"{Tag}");  // button/div/a
+        builder.AddAttribute(0, "type", $"{Type}");  // button/div/a:type
+        if (Tag == "a" && !string.IsNullOrEmpty(Href))
+            builder.AddAttribute(0, "href", $"{Href}"); // a-href
+        if (Disabled)
+            builder.AddAttribute(0, "disabled", $"disabled"); // button/div/a:disabled
+
+        builder.AddAttribute(0, "class", classString);  // button/div/a:class
+
+        if (Loading)
+        {
+            builder.OpenElement(1, "div");
+            builder.AddAttribute(1, "class", "t-loading--center t-size-m t-loading--inherit-color t-loading");
+            builder.OpenElement(2, "svg");
             builder.AddAttribute(2, "width", "1em");
             builder.AddAttribute(2, "height", "1em");
             builder.AddAttribute(2, "xmlns", "http://www.w3.org/2000/svg");
             builder.AddAttribute(2, "class", "t-loading__gradient t-icon-loading");
             builder.AddAttribute(2, "size", "medium");
             builder.AddAttribute(2, "viewBox", "0 0 14 14");
-            builder.OpenElement(4, "foreignObject");
-            builder.AddAttribute(2, "x", "1");
-            builder.AddAttribute(2, "y", "1");
-            builder.AddAttribute(2, "width", "12");
-            builder.AddAttribute(2, "height", "12");
+            builder.OpenElement(3, "foreignObject");
+            builder.AddAttribute(3, "x", "1");
+            builder.AddAttribute(3, "y", "1");
+            builder.AddAttribute(3, "width", "12");
+            builder.AddAttribute(3, "height", "12");
             builder.OpenElement(4, "div");
-            builder.AddAttribute(2, "class", "t-loading__gradient-conic");
-            builder.AddAttribute(2, "style", "background: conic-gradient(from 90deg at 50% 50%, rgba(255, 255, 255, 0) 0deg, rgb(255, 255, 255) 360deg);");
+            builder.AddAttribute(4, "class", "t-loading__gradient-conic");
+            builder.AddAttribute(4, "style", "background: conic-gradient(from 90deg at 50% 50%, rgba(255, 255, 255, 0) 0deg, rgb(255, 255, 255) 360deg);");
+            builder.CloseElement();
             builder.CloseElement();
             builder.CloseElement();
             builder.CloseElement();
         }
 
-        builder.AddAttribute(2, "class", classString);
-        builder.OpenElement(4, "span");
-        builder.AddAttribute(5, "class", "t-button__text");
-        builder.AddContent(6, ChildContent);
-        builder.CloseElement();
-        builder.CloseElement();
+        builder.OpenElement(1, "span");  // span
+        builder.AddAttribute(1, "class", "t-button__text"); // span:class
+        builder.AddContent(1, ChildContent); // span:content
+        builder.CloseElement(); // span close
+        builder.CloseElement(); // button close
     };
 }
-@content
-@*@if (Disabled)
-{
-        <button type="@Type" class="t-button t-size-@_size t-button--variant-@Variant t-button--theme-primary t-button--shape-@Shape t-is-disabled" disabled="disabled" onclick="@OnClick">
-            <span class="t-button__text">@ChildContent</span>
-        </button>
-}
-else
-{
-        <button type="@Type" class="t-button t-size-@_size t-button--variant-@Variant t-button--theme-primary t-button--shape-@Shape" onclick="@OnClick">
-            <span class="t-button__text">@ChildContent</span>
-        </button>
-}*@
 
-@*@((MarkupString)MyProperty)*@
+
+@content
+
