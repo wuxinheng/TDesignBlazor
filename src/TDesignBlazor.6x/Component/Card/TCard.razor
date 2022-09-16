@@ -1,6 +1,6 @@
 ﻿@namespace TDesignBlazor._6x.Component
 
-<div class="t-card t-card--bordered">
+<div class="t-card t-card--bordered" style="@Style">
     @if (!string.IsNullOrEmpty(Title))
     {
         <div class="t-card__header">
@@ -58,4 +58,7 @@
     public string Title { get; set; }
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string Style { get; set; }
 }
