@@ -1,4 +1,5 @@
 ﻿@namespace TDesignBlazor._6x.Component
+@using Microsoft.AspNetCore.Components.Web
 @{
 
     RenderFragment content = builder =>
@@ -8,7 +9,7 @@
 
         if (!string.IsNullOrEmpty(Href) && ((Tag == "a" || Tag == "button")))
             Tag = "a";
-        
+
         if (Disabled)
             classString += "t-is-disabled";
 
@@ -24,6 +25,11 @@
 
         builder.OpenElement(0, $"{Tag}");  // button/div/a
         builder.AddAttribute(0, "type", $"{Type}");  // button/div/a:type
+        builder.AddAttribute(0, "onclick", $"{OnClick}");
+        builder.AddAttribute(0, "onclick", CallbackFactory.Create<MouseEventArgs>(this, async args =>
+               {
+                  await OnClick(args);
+               }));
         if (Tag == "a" && !string.IsNullOrEmpty(Href))
             builder.AddAttribute(0, "href", $"{Href}"); // a-href
         if (Disabled)
@@ -62,8 +68,9 @@
         builder.CloseElement(); // span close
         builder.CloseElement(); // button close
     };
+
+
 }
 
 
 @content
-

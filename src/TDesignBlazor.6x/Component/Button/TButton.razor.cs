@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
+using Microsoft.AspNetCore.Components.Web;
 
 using System;
 using System.Collections.Generic;
@@ -80,15 +81,21 @@ namespace TDesignBlazor._6x.Component
         [Parameter]
         public string Variant { get; set; } = "base";
         [Parameter]
-        public string OnClick { get; set; }
-
+        public EventCallback<MouseEventArgs> Click { get; set; }
         [Parameter]
         public RenderFragment ChildContent { get; set; }
 
-
+        protected static readonly EventCallbackFactory CallbackFactory = new EventCallbackFactory();
         protected override void OnInitialized()
         {
             base.OnInitialized();
+        }
+        private async Task OnClick(MouseEventArgs args)
+        {
+            if (Click.HasDelegate)
+            {
+                await Click.InvokeAsync(args);
+            }
         }
 
     }

@@ -5,7 +5,7 @@
 <h4>测试</h4>
 <TCard>
     <TSpace>
-        <TButton>确定</TButton>
+        <TButton Click="@s">确定</TButton>
     </TSpace>
 </TCard>
 
@@ -188,3 +188,11 @@
         <TButton Href="#">a:href</TButton>
     </TSpace>
 </TCard>
+
+
+@{
+    void s()
+    {
+        var s = 1;
+    }
+}
