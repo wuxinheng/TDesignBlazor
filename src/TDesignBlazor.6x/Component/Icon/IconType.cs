@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TDesignBlazor._6x.Component.Icon
+namespace TDesignBlazor._6x.Component
 {
-    internal static class IconType
+    public static class IconType
     {
         public static string AddCircle => "add-circle";
         public static string AddRectangle => "add-rectangle";
