@@ -18,7 +18,7 @@ namespace TDesignBlazor._6x.Component
         /// 按钮内容
         /// </summary>
         [Parameter]
-        public object Content { get; set; }
+        public RenderFragment Content { get; set; }
         /// <summary>
         /// 按钮内容
         /// </summary>

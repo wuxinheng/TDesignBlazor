@@ -4,7 +4,7 @@
     RenderFragment content = builder =>
     {
         var classString = "";
-        classString = $"t-button t-size-{Size.First()} t-button--variant-{Variant} t-button--theme-primary t-button--shape-{Shape} ";
+        classString = $"t-button t-size-{Size.First()} t-button--variant-{Variant} t-button--theme-{Theme} t-button--shape-{Shape} ";
 
         if (!string.IsNullOrEmpty(Href) && ((Tag == "a" || Tag == "button")))
             Tag = "a";
