@@ -28,7 +28,7 @@
         builder.AddAttribute(0, "onclick", $"{OnClick}");
         builder.AddAttribute(0, "onclick", CallbackFactory.Create<MouseEventArgs>(this, async args =>
                {
-                  await OnClick(args);
+                   await OnClick(args);
                }));
         if (Tag == "a" && !string.IsNullOrEmpty(Href))
             builder.AddAttribute(0, "href", $"{Href}"); // a-href
