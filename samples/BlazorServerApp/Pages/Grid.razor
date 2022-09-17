@@ -1,6 +1,206 @@
 ﻿@page "/grid"
-<h3>Grid</h3>
+@using OneOf
+<h1>Grid 栅格</h1>
 
+<h3>基本使用</h3>
+<TCard>
+  <div>
+    <TRow>
+            @for (var i = 0; i < 12; i++)
+            {
+                if (i % 2 == 0)
+                {
+                  <TCol Span="1">
+                    <div>1</div>
+                  </TCol>
+                }
+                else
+                {
+                  <TCol Span="1">
+                    <div style="background: var(--td-brand-color-4);">1</div>
+                  </TCol>
+                }
+
+            }
+
+    </TRow>
+    <TRow>
+            @for (var i = 0; i < 6; i++)
+            {
+                if (i % 2 == 0)
+                {
+                  <TCol Span="2">
+                    <div>2</div>
+                  </TCol>
+                }
+                else
+                {
+                  <TCol Span="2">
+                    <div style="background: var(--td-brand-color-4);">2</div>
+                  </TCol>
+                }
+            }
+
+    </TRow>
+    <TRow>
+            @for (var i = 0; i < 4; i++)
+            {
+
+
+                if (i % 2 == 0)
+                {
+                  <TCol Span="3">
+                    <div>3</div>
+                  </TCol>
+                }
+                else
+                {
+                  <TCol Span="3">
+                    <div style="background: var(--td-brand-color-4);">3</div>
+                  </TCol>
+                }
+            }
+
+    </TRow>
+    <TRow>
+            @for (var i = 0; i < 3; i++)
+            {
+
+
+                if (i % 2 == 0)
+                {
+                  <TCol Span="4">
+                    <div>4</div>
+                  </TCol>
+                }
+                else
+                {
+                  <TCol Span="4">
+                    <div style="background: var(--td-brand-color-4);">4</div>
+                  </TCol>
+                }
+            }
+
+    </TRow>
+    <TRow>
+            @for (var i = 0; i < 2; i++)
+            {
+
+                if (i % 2 == 0)
+                {
+                  <TCol Span="6">
+                    <div>6</div>
+                  </TCol>
+                }
+                else
+                {
+                  <TCol Span="6">
+                    <div style="background: var(--td-brand-color-4);">6</div>
+                  </TCol>
+                }
+            }
+
+    </TRow>
+    <TRow>
+            @for (var i = 0; i < 1; i++)
+            {
+            <TCol Span="12">
+              <div>12</div>
+            </TCol>
+
+            }
+
+    </TRow>
+  </div>
+</TCard>
+<h3>区块间隔</h3>
+<TCard>
+  <div>
+    <span>水平 gutter 为固定值</span>
+    <TRow Gutter="16">
+      <TCol Span="3">
+        <div>col-3</div>
+      </TCol>
+      <TCol Span="3">
+        <div>col-3</div>
+      </TCol>
+      <TCol Span="3">
+        <div>col-3</div>
+      </TCol>
+      <TCol Span="3">
+        <div>col-3</div>
+      </TCol>
+    </TRow>
+    <span>水平 gutter 为响应式</span>
+        @{
+            var responsiveSetting = new ResponsiveSetting() { Xs = 8, Sm = 16, Md = 24, Lg = 32, Xl = 32, Xxl = 40 };
+            var s = new int[] { 16, 24 };
+        }
+    <TRow Gutter="responsiveSetting">
+      <TCol Span="3">
+        <div>col-3</div>
+      </TCol>
+      <TCol Span="3">
+        <div>col-3</div>
+      </TCol>
+      <TCol Span="3">
+        <div>col-3</div>
+      </TCol>
+      <TCol Span="3">
+        <div>col-3</div>
+      </TCol>
+    </TRow>
+    <span>水平和垂直 gutter 均为固定值</span>
+    <TRow Gutter="new int[] { 16, 24 }">
+            @for (int i = 0; i < 4; i++)
+            {
+            <TCol Span=3>
+              <div>col-3</div>
+            </TCol>
+            }
+
+    </TRow>
+
+        @{
+            List<ResponsiveSetting> responsiveSettings = new List<ResponsiveSetting>();
+        }
+    <span>水平 gutter 响应式，垂直 gutter固定值 </span>
+    <TRow Gutter="new int[] { 16, 24 }">
+            @for (int i = 0; i < 4; i++)
+            {
+            <TCol Span=3>
+              <div>col-3</div>
+            </TCol>
+            }
+
+    </TRow>
+
+    <span>水平和垂直 gutter 均为响应式</span>
+    <TRow Gutter="@responsiveSettings">
+            @for (int i = 0; i < 4; i++)
+            {
+            <TCol Span=3>
+              <div>col-3</div>
+            </TCol>
+            }
+
+    </TRow>
+  </div>
+</TCard>
+
+
+<style>
+  .t-col>div {
+    min-height: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background: var(--td-brand-color-6);
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+
+  }
+</style>
 @code {
 
 }

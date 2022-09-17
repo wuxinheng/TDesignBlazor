@@ -10,8 +10,11 @@ namespace TDesignBlazor._6x.Core.Base
 {
     public class TDesignComponentBase : ComponentBase, ITDesignComponentBase
     {
+        [Parameter]
         public string Id { get; set; }
+        [Parameter]
         public string Class { get; set; }
+        [Parameter]
         public string Style { get; set; }
         /// <summary>
         /// 标签类容
