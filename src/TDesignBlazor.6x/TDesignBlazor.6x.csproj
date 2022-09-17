@@ -16,12 +16,10 @@
     <RepositoryUrl>https://github.com/wuxinheng/TDesignBlazor.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageIcon>favicon.png</PackageIcon>
     <PackageTags>TDesign,Blazor,UI</PackageTags>
     <NeutralLanguage>zh-CN</NeutralLanguage>
     <PackageReleaseNotes>TDesign Blazor UI</PackageReleaseNotes>
     <Copyright>Copyright (c) 2022 wuxinheng</Copyright>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,5 +31,9 @@
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OneOf" Version="3.0.223" />
   </ItemGroup>
 </Project>
