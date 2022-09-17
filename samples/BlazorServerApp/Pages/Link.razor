@@ -1,0 +1,148 @@
+﻿@page "/link"
+
+<h1 class="TDesign-doc-header__info-title" style="opacity: 1; visibility: visible; position: unset; top: 16px; font-size: 48px; line-height: 56px;">Link 链接</h1>
+<h3>文字链接</h3>
+<h4>基础文字链接</h4>
+<p>最简单的文字链接形式，点击后直接跳转到对应链接。</p>
+
+<TCard>
+    <TSpace>
+        <TLink>跳转链接</TLink>
+    </TSpace>
+</TCard>
+
+
+<h4>下划线文字链接</h4>
+<p>在文字下加横线，表明此处为链接。</p>
+<TCard>
+  <TSpace>
+    <TLink Theme="default" Underline> 跳转链接 </TLink>
+    <TLink Theme="primary" Underline> 跳转链接 </TLink>
+    <TLink Theme="danger" Underline> 跳转链接 </TLink>
+    <TLink Theme="warning" Underline> 跳转链接 </TLink>
+    <TLink Theme="success" Underline> 跳转链接 </TLink>
+  </TSpace>
+</TCard>
+<h4>带图标的文字链接</h4>
+<p>文字链接与图标搭配使用，通过图标快速了解链接所代表的含义。</p>
+
+
+<TCard>
+  <TSpace>
+    <TLink Theme="default" PrefixIcon="link" Click="clickLink"> 跳转链接 </TLink>
+    <TLink Theme="primary" Underline Href="https://tdesign.tencent.com/" Target="_self">
+      <TIcon Name="prefix"></TIcon>
+      跳转链接
+    </TLink>
+    <TLink Theme="danger" Hover="color" Href="https://tdesign.tencent.com/" Target="_blank" Click="clickLink">
+      <TIcon Name="jump"></TIcon>
+      跳转链接
+    </TLink>
+    <TLink Theme="warning" SuffixIcon="jump" Disabled> 跳转链接 </TLink>
+  </TSpace>
+</TCard>
+<h4>链接悬浮态样式的链接</h4>
+<p>悬浮状态包含 2 种状态：文本颜色变化 和 添加下划线。由 hover 控制，可选值：color | underline</p>
+
+
+    <TCard>
+  <TSpace Direction="vertical">
+    <TSpace>
+      <TLink Theme="default" Hover="Underline"> 跳转链接 </TLink>
+      <TLink Theme="primary" Hover="Underline"> 跳转链接 </TLink>
+      <TLink Theme="danger" Hover="Underline"> 跳转链接 </TLink>
+      <TLink Theme="warning" Hover="Underline"> 跳转链接 </TLink>
+      <TLink Theme="success" Hover="Underline"> 跳转链接 </TLink>
+    </TSpace>
+    <TSpace>
+      <TLink Theme="default" Hover="color"> 跳转链接 </TLink>
+      <TLink Theme="primary" Hover="color"> 跳转链接 </TLink>
+      <TLink Theme="danger" Hover="color"> 跳转链接 </TLink>
+      <TLink Theme="warning" Hover="color"> 跳转链接 </TLink>
+      <TLink Theme="success" Hover="color"> 跳转链接 </TLink>
+    </TSpace>
+    <TSpace>
+      <TLink Theme="default" Hover="color" Underline> 跳转链接 </TLink>
+      <TLink Theme="primary" Hover="color" Underline> 跳转链接 </TLink>
+      <TLink Theme="danger" Hover="color" Underline> 跳转链接 </TLink>
+      <TLink Theme="warning" Hover="color" Underline> 跳转链接 </TLink>
+      <TLink Theme="success" Hover="color" Underline> 跳转链接 </TLink>
+    </TSpace>
+  </TSpace>
+</TCard>
+<h4>提示不同状态的链接</h4>
+<p>在default、primary、success、warming、danger不同状态下，可提供对应的链接主题色。</p>
+
+
+
+      <TCard>
+  <TSpace>
+    <TLink Theme="default"> 跳转链接 </TLink>
+    <TLink Theme="primary"> 跳转链接 </TLink>
+    <TLink Theme="danger"> 跳转链接 </TLink>
+    <TLink Theme="warning"> 跳转链接 </TLink>
+    <TLink Theme="success"> 跳转链接 </TLink>
+  </TSpace>
+</TCard>
+<h4>禁用的链接</h4>
+<p>当链接不可用时，显示禁用状态。</p>
+
+
+
+      <TCard>
+  <TSpace>
+    <TLink Theme="default" Disabled Click="clickLink"> 跳转链接 </TLink>
+    <TLink Theme="primary" Underline Disabled Click="clickLink"> 跳转链接 </TLink>
+    <TLink Theme="danger" Hover="color" Disabled Click="clickLink"> 跳转链接 </TLink>
+    <TLink Theme="warning" Hover="Underline" Disabled Click="clickLink"> 跳转链接 </TLink>
+    <TLink Theme="success" Disabled Click="clickLink">
+      <TIcon Name="jump"></TIcon>
+      跳转链接
+    </TLink>
+  </TSpace>
+</TCard>
+<h4>不同尺寸的链接</h4>
+<p>提供大、中（默认）、小三种尺寸。</p>
+
+
+  <TCard>
+  <TSpace direction="vertical">
+    <TSpace>
+      <TLink Theme="default" Size="small"> 跳转链接 </TLink>
+      <TLink Theme="primary" Size="small"> 跳转链接 </TLink>
+      <TLink Theme="danger" Size="small"> 跳转链接 </TLink>
+      <TLink Theme="warning" Size="small" Disabled>跳转链接</TLink>
+      <TLink Theme="success" Size="small">
+        <TIcon Name="jump"></TIcon>
+        跳转链接
+      </TLink>
+    </TSpace>
+    <TSpace>
+      <TLink Theme="default" Size="medium"> 跳转链接 </TLink>
+      <TLink Theme="primary" Size="medium"> 跳转链接 </TLink>
+      <TLink Theme="danger" Size="medium"> 跳转链接 </TLink>
+      <TLink Theme="warning" Size="medium" Disabled>跳转链接</TLink>
+      <TLink Theme="success" Size="medium">
+        <TIcon Name="jump"></TIcon>
+        跳转链接
+      </TLink>
+    </TSpace>
+    <TSpace>
+      <TLink Theme="default" Size="large"> 跳转链接 </TLink>
+      <TLink Theme="primary" Size="large"> 跳转链接 </TLink>
+      <TLink Theme="danger" Size="large"> 跳转链接 </TLink>
+      <TLink Theme="warning" Size="large" Disabled>跳转链接</TLink>
+      <TLink Theme="success" Size="large">
+        <TIcon Name="jump"></TIcon>
+        跳转链接
+      </TLink>
+    </TSpace>
+  </TSpace>
+</TCard>
+
+@code {
+    void clickLink()
+    {
+
+    }
+}

@@ -1,6 +1,51 @@
 ﻿@namespace TDesignBlazor._6x.Component
-<a target class="t-link t-size-m t-link--theme-default t-link--hover-underline"> @ChildContent </a>
+@using TDesignBlazor._6x.Core.Base
+@inherits TDesignComponentBase
+
+@{
+    string classString = "";
+    if (Underline)
+        classString = "t-link--hover-underline ";
+
+}
+
+<a target class="t-link t-size-m t-link--theme-@Theme @classString">
+    @if (!string.IsNullOrEmpty( PrefixIcon))
+    { 
+         <TIcon Name="@PrefixIcon"></TIcon>
+    }
+    @ChildContent
+    @if (!string.IsNullOrEmpty(SuffixIcon))
+    {
+         <TIcon Name="@SuffixIcon"></TIcon>
+    }
+    </a>
+
+
 @code {
+
     [Parameter]
-    public RenderFragment ChildContent { get; set; }
+    public string Content { get; set; }
+    [Parameter]
+    public string Default { get; set; }
+    [Parameter]
+    public bool Disabled { get; set; }
+    [Parameter]
+    public string Hover { get; set; } = "underline";
+    [Parameter]
+    public string Href { get; set; }
+    [Parameter]
+    public string PrefixIcon { get; set; }
+    [Parameter]
+    public string Size { get; set; } = "medium";
+    [Parameter]
+    public string SuffixIcon { get; set; }
+    [Parameter]
+    public string Target { get; set; }
+    [Parameter]
+    public string Theme { get; set; } = "default";
+    [Parameter]
+    public bool Underline { get; set; }
+    [Parameter]
+    public string @Type { get; set; }
 }

@@ -1,6 +1,5 @@
 ﻿@namespace TDesignBlazor._6x.Component
-<div class="t-space t-space-@Direction" style="gap: 16px; width: 100%; text-align: @Align;">@ChildContent</div>
-
+<div class="t-space t-space-@Direction" style="gap: 16px; width: 100%; text-align: @Align;" >@ChildContent</div>
 @code {
     [Parameter]
     public string Align { get; set; } = "center";
