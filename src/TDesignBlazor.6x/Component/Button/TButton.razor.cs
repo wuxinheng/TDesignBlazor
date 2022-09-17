@@ -96,6 +96,13 @@ namespace TDesignBlazor._6x.Component
             }
         }
 
+        //RenderFragment GetRenderFragment()
+        //{
+        //    if (ChildContent.GetHashCode() == 0)
+        //    {
+        //    }
+        //}
+
     }
 
 }
