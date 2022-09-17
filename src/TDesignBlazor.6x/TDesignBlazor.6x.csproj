@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -6,6 +6,24 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <RootNamespace>TDesignBlazor._6x</RootNamespace>
+    <PackageId>TDesign</PackageId>
+    <Version>0.0.1-preview</Version>
+    <Authors>wuxinheng</Authors>
+    <Company />
+    <Product>TDesignBlazor</Product>
+    <Description>TDesignBlazor</Description>
+    <PackageProjectUrl>https://github.com/wuxinheng/TDesignBlazor</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/wuxinheng/TDesignBlazor.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageIcon>favicon.png</PackageIcon>
+    <PackageTags>TDesign,Blazor,UI</PackageTags>
+    <NeutralLanguage>zh-CN</NeutralLanguage>
+    <PackageReleaseNotes>TDesign Blazor UI</PackageReleaseNotes>
+    <Copyright>Copyright (c) 2022 wuxinheng</Copyright>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +36,22 @@
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Administrator\Desktop\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="C:\Users\Administrator\Desktop\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="C:\Users\Administrator\Downloads\favicon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
 
 
 
