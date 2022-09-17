@@ -21,8 +21,6 @@
     <NeutralLanguage>zh-CN</NeutralLanguage>
     <PackageReleaseNotes>TDesign Blazor UI</PackageReleaseNotes>
     <Copyright>Copyright (c) 2022 wuxinheng</Copyright>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
@@ -36,23 +34,4 @@
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
-
-  <ItemGroup>
-    <None Include="C:\Users\Administrator\Desktop\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="C:\Users\Administrator\Desktop\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="C:\Users\Administrator\Downloads\favicon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
-
-
-
-
 </Project>

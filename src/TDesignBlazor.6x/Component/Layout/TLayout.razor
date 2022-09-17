@@ -2,8 +2,16 @@
 @using TDesignBlazor._6x.Core.Base
 @inherits TDesignComponentBase
 <section class="t-layout t-layout--with-sider">
+    <header class="t-layout__header">@ChildContent</header>
+   
 </section>
-
+ <section class="t-layout t-layout--with-sider">
+        <aside class="t-layout__sider">@ChildContent</aside>
+        <main class="t-layout__content">@ChildContent</main>
+    </section>
 @code {
+   
+
+
 
 }
