@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OneOf;
+﻿using OneOf;
 
-namespace TDesignBlazor._6x.Component.Grid
+
+
+
+namespace TDesignBlazor._6x.Component
 {
-
 
     /// <summary>
     /// 响应式

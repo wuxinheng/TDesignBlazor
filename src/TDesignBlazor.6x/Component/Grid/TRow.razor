@@ -1,32 +1,57 @@
 ﻿@namespace TDesignBlazor._6x.Component
-@using OneOf
-@using TDesignBlazor._6x.Component.Grid
 @using TDesignBlazor._6x.Core.Base
-@using System
 @inherits TDesignComponentBase
+@using Microsoft.AspNetCore.Components.Web
 
 @{
-    var defaultStyle = "margin-left: 0px; margin-right: 0px;";
-    //if (Gutter!=null&&Gutter.GetType() == typeof(int))
-    //{
-    //    var gint = int.Parse(Gutter.ToString());
-    //    var s = 0 - (gint / 2);
-    //    defaultStyle = $"margin-left: {s}px; margin-right: {s}0px;";
-    //} 
+    var defaultStyle = "margin-left: 0px; margin-right: 0px;row-gap: 0px;";
+    int _md = 0;
+
+    int _sm = Gutter.Match<int>(
+        a =>
+        {
+            if (a != 0)
+                return 0 - (a / 2);
+            else
+                return 0;
+        },
+        b =>
+        {
+            _md = b[1];
+            return b[0];
+        },
+        c =>
+        {
+            _md = c.Md.AsT0;
+            return c.Sm.AsT0;
+
+        },
+        d =>
+        {
+            _md = d.FirstOrDefault() == null ? 0 : d.FirstOrDefault().Md.AsT0;
+            return d.FirstOrDefault() == null ? 0 : d.FirstOrDefault().Sm.AsT0;
+        },
+        e =>
+        {
+            _md = e.FirstOrDefault().Match(a => a, b =>
+            {
+                return b.FirstOrDefault() == null ? 0 : b.FirstOrDefault().Md.AsT0;
+            });
+            return e.FirstOrDefault().Match(a => a, b =>
+            {
+                return b.FirstOrDefault() == null ? 0 : b.FirstOrDefault().Sm.AsT0;
+            });
+        }
+    );
+
+    defaultStyle = $"margin-left: {_sm}px; margin-right: {_sm}px;row-gap: {_md}px;";
+
 }
 
 <div class="t-row t-row--start t-row--align-top" style="@defaultStyle">
     @ChildContent
 </div>
 
-@code {
-    [Parameter]
-    public string Align { get; set; }
-    [Parameter]
-    public string Justify { get; set; }
-    [Parameter]
-    public string Tag { get; set; }
-    [Parameter]
-    public OneOf<int, int[], IEnumerable<ResponsiveSetting>> Gutter { get; set; }
 
-}
+
+
