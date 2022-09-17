@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,16 +20,16 @@ namespace TDesignBlazor._6x.Core.Base
         /// 点击委托
         /// </summary>
         [Parameter]
-        public Action<object> Click { get; set; }
+        public EventCallback<MouseEventArgs> Click { get; set; }
         /// <summary>
         /// 点击执行
         /// </summary>
         /// <param name="obj"></param>
-        public void OnClick(object obj)
+        private async Task OnClick(MouseEventArgs args)
         {
-            if (Click != null)
+            if (Click.HasDelegate)
             {
-                Click.Invoke(obj);
+                await Click.InvokeAsync(args);
             }
         }
 
