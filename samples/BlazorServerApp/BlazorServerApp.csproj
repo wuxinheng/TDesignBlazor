@@ -9,11 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TDesignBlazor.6x\TDesignBlazor.6x.csproj" />
+    <Folder Include="wwwroot\tdesign-vue%400.46.4\dist\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\tdesign-vue%400.46.4\dist\" />
+    <ProjectReference Include="..\..\src\TDesignBlazor.6x\TDesignBlazor.6x.csproj" />
   </ItemGroup>
 
 

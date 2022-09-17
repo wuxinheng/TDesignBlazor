@@ -5,7 +5,7 @@
 <h4>测试</h4>
 <TCard>
     <TSpace>
-        <TButton Click="@s">确定</TButton>
+        <TButton Click="@TestMethod">确定</TButton>
     </TSpace>
 </TCard>
 
@@ -65,7 +65,7 @@
 <p>幽灵按钮将按钮的内容反色，背景变为透明，一般是底色透明。常用于有色背景上，例如 banner 图等。</p>
 
 
-<TCard>
+<TCard Style="background-color:black;">
     <TSpace Direction="vertical">
         <TSpace>
             <TButton Variant="outline" Ghost>幽灵按钮</TButton>
@@ -191,7 +191,7 @@
 
 
 @{
-    void s()
+    void TestMethod()
     {
         var s = 1;
     }
