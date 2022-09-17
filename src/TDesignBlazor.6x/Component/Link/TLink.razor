@@ -5,19 +5,22 @@
 @{
     string classString = "";
     if (Underline)
-        classString = "t-link--hover-underline ";
+        classString += "t-is-underline ";
+
+    if (Disabled)
+        classString += "t-is-disabled ";
 
 }
 
-<a target class="t-link t-size-m t-link--theme-@Theme @classString">
-    @if (!string.IsNullOrEmpty( PrefixIcon))
+<a target class="t-link t-size-@Size.Substring(0,1) t-link--theme-@Theme t-link--hover-@Hover @classString">
+    @if (!string.IsNullOrEmpty(PrefixIcon))
     { 
-         <TIcon Name="@PrefixIcon"></TIcon>
+             <TIcon Name="@PrefixIcon"></TIcon>
     }
     @ChildContent
     @if (!string.IsNullOrEmpty(SuffixIcon))
     {
-         <TIcon Name="@SuffixIcon"></TIcon>
+             <TIcon Name="@SuffixIcon"></TIcon>
     }
     </a>
 

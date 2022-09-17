@@ -10,7 +10,9 @@ namespace TDesignBlazor._6x.Core.Base
 {
     public class TDesignComponentBase : ComponentBase, ITDesignComponentBase
     {
-
+        public string Id { get; set; }
+        public string Class { get; set; }
+        public string Style { get; set; }
         /// <summary>
         /// 标签类容
         /// </summary>
@@ -24,7 +26,6 @@ namespace TDesignBlazor._6x.Core.Base
         /// <summary>
         /// 点击执行
         /// </summary>
-        /// <param name="obj"></param>
         private async Task OnClick(MouseEventArgs args)
         {
             if (Click.HasDelegate)
