@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace TDesignBlazor._6x.Component
 {
-    public partial class TButton : ComponentBase
+    public partial class TButton
     {
         /// <summary>
         /// 是否为块级元素
@@ -80,10 +80,8 @@ namespace TDesignBlazor._6x.Component
         /// </summary>
         [Parameter]
         public string Variant { get; set; } = "base";
-        [Parameter]
-        public EventCallback<MouseEventArgs> Click { get; set; }
-        [Parameter]
-        public RenderFragment ChildContent { get; set; }
+
+
 
         protected static readonly EventCallbackFactory CallbackFactory = new EventCallbackFactory();
         protected override void OnInitialized()
