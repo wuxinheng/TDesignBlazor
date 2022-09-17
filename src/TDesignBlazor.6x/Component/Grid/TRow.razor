@@ -1,9 +1,32 @@
 ﻿@namespace TDesignBlazor._6x.Component
+@using OneOf
+@using TDesignBlazor._6x.Component.Grid
 @using TDesignBlazor._6x.Core.Base
+@using System
 @inherits TDesignComponentBase
-<div class="t-row t-row--start t-row--align-top" style="margin-left: 0px; margin-right: 0px;">
+
+@{
+    var defaultStyle = "margin-left: 0px; margin-right: 0px;";
+    //if (Gutter!=null&&Gutter.GetType() == typeof(int))
+    //{
+    //    var gint = int.Parse(Gutter.ToString());
+    //    var s = 0 - (gint / 2);
+    //    defaultStyle = $"margin-left: {s}px; margin-right: {s}0px;";
+    //} 
+}
+
+<div class="t-row t-row--start t-row--align-top" style="@defaultStyle">
+    @ChildContent
 </div>
 
 @code {
+    [Parameter]
+    public string Align { get; set; }
+    [Parameter]
+    public string Justify { get; set; }
+    [Parameter]
+    public string Tag { get; set; }
+    [Parameter]
+    public OneOf<int, int[], IEnumerable<ResponsiveSetting>> Gutter { get; set; }
 
 }

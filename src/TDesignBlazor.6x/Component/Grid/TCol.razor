@@ -1,8 +1,38 @@
 ﻿@namespace TDesignBlazor._6x.Component
 @using TDesignBlazor._6x.Core.Base
 @inherits TDesignComponentBase
-<div class="t-col t-col-1" style="padding-left: 0px; padding-right: 0px;"><div>1</div></div>
+<div class="t-col t-col-@Span" style="padding-left: 0px; padding-right: 0px;@Style" > 
+    @ChildContent
+</div>
+
 
 @code {
+    [Parameter]
+    public string Flex { get; set; }
+    [Parameter]
+    public string Lg { get; set; }
+    [Parameter]
+    public string Md { get; set; }
+    [Parameter]
+    public string Offset { get; set; }
+    [Parameter]
+    public string Order { get; set; }
+    [Parameter]
+    public string Pull { get; set; }
+    [Parameter]
+    public string Push { get; set; }
+    [Parameter]
+    public string Sm { get; set; }
+    [Parameter]
+    public int Span { get; set; }
+    [Parameter]
+    public string Tag { get; set; }
+    [Parameter]
+    public string Xl { get; set; }
+    [Parameter]
+    public string Xs { get; set; }
+    [Parameter]
+    public string Xxl { get; set; }
+
 
 }
