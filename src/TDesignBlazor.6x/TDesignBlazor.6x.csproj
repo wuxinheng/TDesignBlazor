@@ -30,10 +30,274 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="wwwroot\tdesign.css" />
+    <None Remove="wwwroot\tdesign.css.map" />
+    <None Remove="wwwroot\tdesign.js" />
+    <None Remove="wwwroot\tdesign.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wwwroot\tdesign.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="wwwroot\tdesign.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="wwwroot\tdesign.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="OneOf" Version="3.0.223" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\svg\add-circle.svg" />
+    <None Include="wwwroot\svg\add-rectangle.svg" />
+    <None Include="wwwroot\svg\add.svg" />
+    <None Include="wwwroot\svg\app.svg" />
+    <None Include="wwwroot\svg\arrow-down-rectangle.svg" />
+    <None Include="wwwroot\svg\arrow-down.svg" />
+    <None Include="wwwroot\svg\arrow-left.svg" />
+    <None Include="wwwroot\svg\arrow-right.svg" />
+    <None Include="wwwroot\svg\arrow-up.svg" />
+    <None Include="wwwroot\svg\attach.svg" />
+    <None Include="wwwroot\svg\backtop-rectangle.svg" />
+    <None Include="wwwroot\svg\backtop.svg" />
+    <None Include="wwwroot\svg\backward.svg" />
+    <None Include="wwwroot\svg\barcode.svg" />
+    <None Include="wwwroot\svg\books.svg" />
+    <None Include="wwwroot\svg\browse-off.svg" />
+    <None Include="wwwroot\svg\browse.svg" />
+    <None Include="wwwroot\svg\bulletpoint.svg" />
+    <None Include="wwwroot\svg\calendar.svg" />
+    <None Include="wwwroot\svg\call.svg" />
+    <None Include="wwwroot\svg\caret-down-small.svg" />
+    <None Include="wwwroot\svg\caret-down.svg" />
+    <None Include="wwwroot\svg\caret-left-small.svg" />
+    <None Include="wwwroot\svg\caret-left.svg" />
+    <None Include="wwwroot\svg\caret-right-small.svg" />
+    <None Include="wwwroot\svg\caret-right.svg" />
+    <None Include="wwwroot\svg\caret-up-small.svg" />
+    <None Include="wwwroot\svg\caret-up.svg" />
+    <None Include="wwwroot\svg\cart.svg" />
+    <None Include="wwwroot\svg\chart-bar.svg" />
+    <None Include="wwwroot\svg\chart-bubble.svg" />
+    <None Include="wwwroot\svg\chart-pie.svg" />
+    <None Include="wwwroot\svg\chart.svg" />
+    <None Include="wwwroot\svg\chat.svg" />
+    <None Include="wwwroot\svg\check-circle-filled.svg" />
+    <None Include="wwwroot\svg\check-circle.svg" />
+    <None Include="wwwroot\svg\check-rectangle-filled.svg" />
+    <None Include="wwwroot\svg\check-rectangle.svg" />
+    <None Include="wwwroot\svg\check.svg" />
+    <None Include="wwwroot\svg\chevron-down-circle.svg" />
+    <None Include="wwwroot\svg\chevron-down-rectangle.svg" />
+    <None Include="wwwroot\svg\chevron-down.svg" />
+    <None Include="wwwroot\svg\chevron-left-circle.svg" />
+    <None Include="wwwroot\svg\chevron-left-double.svg" />
+    <None Include="wwwroot\svg\chevron-left-rectangle.svg" />
+    <None Include="wwwroot\svg\chevron-left.svg" />
+    <None Include="wwwroot\svg\chevron-right-circle.svg" />
+    <None Include="wwwroot\svg\chevron-right-double.svg" />
+    <None Include="wwwroot\svg\chevron-right-rectangle.svg" />
+    <None Include="wwwroot\svg\chevron-right.svg" />
+    <None Include="wwwroot\svg\chevron-up-circle.svg" />
+    <None Include="wwwroot\svg\chevron-up-rectangle.svg" />
+    <None Include="wwwroot\svg\chevron-up.svg" />
+    <None Include="wwwroot\svg\circle.svg" />
+    <None Include="wwwroot\svg\clear.svg" />
+    <None Include="wwwroot\svg\close-circle-filled.svg" />
+    <None Include="wwwroot\svg\close-circle.svg" />
+    <None Include="wwwroot\svg\close-rectangle.svg" />
+    <None Include="wwwroot\svg\close.svg" />
+    <None Include="wwwroot\svg\cloud-download.svg" />
+    <None Include="wwwroot\svg\cloud-upload.svg" />
+    <None Include="wwwroot\svg\cloud.svg" />
+    <None Include="wwwroot\svg\code.svg" />
+    <None Include="wwwroot\svg\control-platform.svg" />
+    <None Include="wwwroot\svg\creditcard.svg" />
+    <None Include="wwwroot\svg\dashboard.svg" />
+    <None Include="wwwroot\svg\delete.svg" />
+    <None Include="wwwroot\svg\desktop.svg" />
+    <None Include="wwwroot\svg\discount-filled.svg" />
+    <None Include="wwwroot\svg\discount.svg" />
+    <None Include="wwwroot\svg\download.svg" />
+    <None Include="wwwroot\svg\edit-1.svg" />
+    <None Include="wwwroot\svg\edit.svg" />
+    <None Include="wwwroot\svg\ellipsis.svg" />
+    <None Include="wwwroot\svg\enter.svg" />
+    <None Include="wwwroot\svg\error-circle-filled.svg" />
+    <None Include="wwwroot\svg\error-circle.svg" />
+    <None Include="wwwroot\svg\error.svg" />
+    <None Include="wwwroot\svg\file-add.svg" />
+    <None Include="wwwroot\svg\file-copy.svg" />
+    <None Include="wwwroot\svg\file-excel.svg" />
+    <None Include="wwwroot\svg\file-icon.svg" />
+    <None Include="wwwroot\svg\file-image.svg" />
+    <None Include="wwwroot\svg\file-paste.svg" />
+    <None Include="wwwroot\svg\file-pdf.svg" />
+    <None Include="wwwroot\svg\file-powerpoint.svg" />
+    <None Include="wwwroot\svg\file-unknown.svg" />
+    <None Include="wwwroot\svg\file-word.svg" />
+    <None Include="wwwroot\svg\file.svg" />
+    <None Include="wwwroot\svg\filter-clear.svg" />
+    <None Include="wwwroot\svg\filter.svg" />
+    <None Include="wwwroot\svg\flag.svg" />
+    <None Include="wwwroot\svg\folder-add.svg" />
+    <None Include="wwwroot\svg\folder-open.svg" />
+    <None Include="wwwroot\svg\folder.svg" />
+    <None Include="wwwroot\svg\fork.svg" />
+    <None Include="wwwroot\svg\format-horizontal-align-bottom.svg" />
+    <None Include="wwwroot\svg\format-horizontal-align-center.svg" />
+    <None Include="wwwroot\svg\format-horizontal-align-top.svg" />
+    <None Include="wwwroot\svg\format-vertical-align-center.svg" />
+    <None Include="wwwroot\svg\format-vertical-align-left.svg" />
+    <None Include="wwwroot\svg\format-vertical-align-right.svg" />
+    <None Include="wwwroot\svg\forward.svg" />
+    <None Include="wwwroot\svg\fullscreen-exit.svg" />
+    <None Include="wwwroot\svg\fullscreen.svg" />
+    <None Include="wwwroot\svg\gender-female.svg" />
+    <None Include="wwwroot\svg\gender-male.svg" />
+    <None Include="wwwroot\svg\gift.svg" />
+    <None Include="wwwroot\svg\heart-filled.svg" />
+    <None Include="wwwroot\svg\heart.svg" />
+    <None Include="wwwroot\svg\help-circle-filled.svg" />
+    <None Include="wwwroot\svg\help-circle.svg" />
+    <None Include="wwwroot\svg\help.svg" />
+    <None Include="wwwroot\svg\history.svg" />
+    <None Include="wwwroot\svg\home.svg" />
+    <None Include="wwwroot\svg\hourglass.svg" />
+    <None Include="wwwroot\svg\image-error.svg" />
+    <None Include="wwwroot\svg\image.svg" />
+    <None Include="wwwroot\svg\info-circle-filled.svg" />
+    <None Include="wwwroot\svg\info-circle.svg" />
+    <None Include="wwwroot\svg\internet.svg" />
+    <None Include="wwwroot\svg\jump.svg" />
+    <None Include="wwwroot\svg\laptop.svg" />
+    <None Include="wwwroot\svg\layers.svg" />
+    <None Include="wwwroot\svg\link-unlink.svg" />
+    <None Include="wwwroot\svg\link.svg" />
+    <None Include="wwwroot\svg\loading.svg" />
+    <None Include="wwwroot\svg\location.svg" />
+    <None Include="wwwroot\svg\lock-off.svg" />
+    <None Include="wwwroot\svg\lock-on.svg" />
+    <None Include="wwwroot\svg\login.svg" />
+    <None Include="wwwroot\svg\logo-android.svg" />
+    <None Include="wwwroot\svg\logo-apple-filled.svg" />
+    <None Include="wwwroot\svg\logo-apple.svg" />
+    <None Include="wwwroot\svg\logo-chrome-filled.svg" />
+    <None Include="wwwroot\svg\logo-chrome.svg" />
+    <None Include="wwwroot\svg\logo-codepen.svg" />
+    <None Include="wwwroot\svg\logo-github-filled.svg" />
+    <None Include="wwwroot\svg\logo-github.svg" />
+    <None Include="wwwroot\svg\logo-ie-filled.svg" />
+    <None Include="wwwroot\svg\logo-ie.svg" />
+    <None Include="wwwroot\svg\logo-qq.svg" />
+    <None Include="wwwroot\svg\logo-wechat.svg" />
+    <None Include="wwwroot\svg\logo-wecom.svg" />
+    <None Include="wwwroot\svg\logo-windows-filled.svg" />
+    <None Include="wwwroot\svg\logo-windows.svg" />
+    <None Include="wwwroot\svg\logout.svg" />
+    <None Include="wwwroot\svg\mail.svg" />
+    <None Include="wwwroot\svg\menu-fold.svg" />
+    <None Include="wwwroot\svg\menu-unfold.svg" />
+    <None Include="wwwroot\svg\minus-circle-filled.svg" />
+    <None Include="wwwroot\svg\minus-circle.svg" />
+    <None Include="wwwroot\svg\minus-rectangle.svg" />
+    <None Include="wwwroot\svg\mirror.svg" />
+    <None Include="wwwroot\svg\mobile-vibrate.svg" />
+    <None Include="wwwroot\svg\mobile.svg" />
+    <None Include="wwwroot\svg\money-circle.svg" />
+    <None Include="wwwroot\svg\more.svg" />
+    <None Include="wwwroot\svg\move.svg" />
+    <None Include="wwwroot\svg\next.svg" />
+    <None Include="wwwroot\svg\notification-filled.svg" />
+    <None Include="wwwroot\svg\notification.svg" />
+    <None Include="wwwroot\svg\order-adjustment-column.svg" />
+    <None Include="wwwroot\svg\order-ascending.svg" />
+    <None Include="wwwroot\svg\order-descending.svg" />
+    <None Include="wwwroot\svg\page-first.svg" />
+    <None Include="wwwroot\svg\page-last.svg" />
+    <None Include="wwwroot\svg\pause-circle-filled.svg" />
+    <None Include="wwwroot\svg\photo.svg" />
+    <None Include="wwwroot\svg\pin-filled.svg" />
+    <None Include="wwwroot\svg\pin.svg" />
+    <None Include="wwwroot\svg\play-circle-filled.svg" />
+    <None Include="wwwroot\svg\play-circle-stroke.svg" />
+    <None Include="wwwroot\svg\play-circle.svg" />
+    <None Include="wwwroot\svg\play.svg" />
+    <None Include="wwwroot\svg\poweroff.svg" />
+    <None Include="wwwroot\svg\precise-monitor.svg" />
+    <None Include="wwwroot\svg\previous.svg" />
+    <None Include="wwwroot\svg\print.svg" />
+    <None Include="wwwroot\svg\qrcode.svg" />
+    <None Include="wwwroot\svg\queue.svg" />
+    <None Include="wwwroot\svg\rectangle.svg" />
+    <None Include="wwwroot\svg\refresh.svg" />
+    <None Include="wwwroot\svg\relativity.svg" />
+    <None Include="wwwroot\svg\remove.svg" />
+    <None Include="wwwroot\svg\rollback.svg" />
+    <None Include="wwwroot\svg\rollfront.svg" />
+    <None Include="wwwroot\svg\root-list.svg" />
+    <None Include="wwwroot\svg\rotation.svg" />
+    <None Include="wwwroot\svg\round.svg" />
+    <None Include="wwwroot\svg\save.svg" />
+    <None Include="wwwroot\svg\scan.svg" />
+    <None Include="wwwroot\svg\search.svg" />
+    <None Include="wwwroot\svg\secured.svg" />
+    <None Include="wwwroot\svg\server.svg" />
+    <None Include="wwwroot\svg\service.svg" />
+    <None Include="wwwroot\svg\setting.svg" />
+    <None Include="wwwroot\svg\share.svg" />
+    <None Include="wwwroot\svg\shop.svg" />
+    <None Include="wwwroot\svg\slash.svg" />
+    <None Include="wwwroot\svg\sound.svg" />
+    <None Include="wwwroot\svg\star-filled.svg" />
+    <None Include="wwwroot\svg\star.svg" />
+    <None Include="wwwroot\svg\stop-circle-1.svg" />
+    <None Include="wwwroot\svg\stop-circle-filled.svg" />
+    <None Include="wwwroot\svg\stop-circle.svg" />
+    <None Include="wwwroot\svg\stop.svg" />
+    <None Include="wwwroot\svg\swap-left.svg" />
+    <None Include="wwwroot\svg\swap-right.svg" />
+    <None Include="wwwroot\svg\swap.svg" />
+    <None Include="wwwroot\svg\thumb-down.svg" />
+    <None Include="wwwroot\svg\thumb-up.svg" />
+    <None Include="wwwroot\svg\time-filled.svg" />
+    <None Include="wwwroot\svg\time.svg" />
+    <None Include="wwwroot\svg\tips.svg" />
+    <None Include="wwwroot\svg\tools.svg" />
+    <None Include="wwwroot\svg\unfold-less.svg" />
+    <None Include="wwwroot\svg\unfold-more.svg" />
+    <None Include="wwwroot\svg\upload.svg" />
+    <None Include="wwwroot\svg\usb.svg" />
+    <None Include="wwwroot\svg\user-add.svg" />
+    <None Include="wwwroot\svg\user-avatar.svg" />
+    <None Include="wwwroot\svg\user-circle.svg" />
+    <None Include="wwwroot\svg\user-clear.svg" />
+    <None Include="wwwroot\svg\user-talk.svg" />
+    <None Include="wwwroot\svg\user.svg" />
+    <None Include="wwwroot\svg\usergroup-add.svg" />
+    <None Include="wwwroot\svg\usergroup-clear.svg" />
+    <None Include="wwwroot\svg\usergroup.svg" />
+    <None Include="wwwroot\svg\video.svg" />
+    <None Include="wwwroot\svg\view-column.svg" />
+    <None Include="wwwroot\svg\view-list.svg" />
+    <None Include="wwwroot\svg\view-module.svg" />
+    <None Include="wwwroot\svg\wallet.svg" />
+    <None Include="wwwroot\svg\wifi.svg" />
+    <None Include="wwwroot\svg\zoom-in.svg" />
+    <None Include="wwwroot\svg\zoom-out.svg" />
   </ItemGroup>
 </Project>
