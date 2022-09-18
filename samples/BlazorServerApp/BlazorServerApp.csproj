@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-	  <TargetFramework>net6</TargetFramework>
+    <TargetFramework>net6</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TDesignBlazor.6x\TDesignBlazor.6x.csproj" />
+    <ProjectReference Include="..\..\src\TDesignBlazor\TDesign.csproj" />
   </ItemGroup>
 
 
