@@ -1,0 +1,54 @@
+﻿@namespace TDesign.Component
+@using TDesign.Core.Base
+@inherits TDesignComponentBase
+
+@{
+    string classString = "";
+    if (Underline)
+        classString += "t-is-underline ";
+
+    if (Disabled)
+        classString += "t-is-disabled ";
+
+}
+
+<a target class="t-link t-size-@Size.Substring(0,1) t-link--theme-@Theme t-link--hover-@Hover @classString">
+    @if (!string.IsNullOrEmpty(PrefixIcon))
+    { 
+             <TIcon Name="@PrefixIcon"></TIcon>
+    }
+    @ChildContent
+    @if (!string.IsNullOrEmpty(SuffixIcon))
+    {
+             <TIcon Name="@SuffixIcon"></TIcon>
+    }
+    </a>
+
+
+@code {
+
+    [Parameter]
+    public string Content { get; set; }
+    [Parameter]
+    public string Default { get; set; }
+    [Parameter]
+    public bool Disabled { get; set; }
+    [Parameter]
+    public string Hover { get; set; } = "underline";
+    [Parameter]
+    public string Href { get; set; }
+    [Parameter]
+    public string PrefixIcon { get; set; }
+    [Parameter]
+    public string Size { get; set; } = "medium";
+    [Parameter]
+    public string SuffixIcon { get; set; }
+    [Parameter]
+    public string Target { get; set; }
+    [Parameter]
+    public string Theme { get; set; } = "default";
+    [Parameter]
+    public bool Underline { get; set; }
+    [Parameter]
+    public string @Type { get; set; }
+}

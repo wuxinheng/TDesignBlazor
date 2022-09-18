@@ -1,2 +1,0 @@
-# TDesignBlazor
-TDesignBlazor  Beta
