@@ -28,15 +28,10 @@ nstall-Package TDesign -Version 0.0.1-preview
 
 # 基础使用
 
-_Host.cshtml引入外部文件,前期建议先缓存下来，地址：
-
-https://github.com/wuxinheng/TDesignBlazor/blob/main/samples/BlazorServerApp/wwwroot/tdesign.css
-
-https://github.com/wuxinheng/TDesignBlazor/blob/main/samples/BlazorServerApp/wwwroot/tdesign.js
+_Host.cshtml：
 
 ```html
-<link href="~/tdesign.css" rel="stylesheet" />
-<script src="~/tdesign.js"></script>
+<link href="_content/TDesign/css/tdesign.css" rel="stylesheet">
 ```
 
 _Imports.razor中导入

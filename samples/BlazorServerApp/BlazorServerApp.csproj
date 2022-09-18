@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TDesignBlazor\TDesign.csproj" />
+    <ProjectReference Include="..\..\src\TDesign\TDesign.csproj" />
   </ItemGroup>
 
 
