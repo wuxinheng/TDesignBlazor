@@ -1,14 +1,9 @@
 ﻿@namespace TDesign.Component
 @using TDesign.Core.Base
 @inherits TDesignComponentBase
-<section class="t-layout t-layout--with-sider">
-    <header class="t-layout__header">@ChildContent</header>
-   
+<section class="t-layout @Class">
+    @ChildContent
 </section>
- <section class="t-layout t-layout--with-sider">
-        <aside class="t-layout__sider">@ChildContent</aside>
-        <main class="t-layout__content">@ChildContent</main>
-    </section>
 @code {
    
 

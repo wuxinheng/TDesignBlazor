@@ -1,13 +1,103 @@
 ﻿@page "/Layout"
-<h3>Layout</h3>
+<h1>Layout 布局</h1>
+<p>用于组织网页的框架结构。</p>
+
+<h3>基础用法</h3>
+
 <TCard>
-    <TSpace>
-        <TLayout></TLayout>
-    </TSpace>
-     <TSpace>
-        <TLayout></TLayout>
-    </TSpace>
+    <div class="tdesign-demo-item--base">
+
+
+        <div>
+            <TLayout>
+                <THeader>Header</THeader>
+                <TContent>Content</TContent>
+                <TFooter>Footer</TFooter>
+            </TLayout>
+        </div>
+
+
+
+        <div>
+            <TLayout>
+                <THeader>Header</THeader>
+                <TLayout Class="t-layout--with-sider">
+                    <TAside>Aside</TAside>
+                    <TContent>Content</TContent>
+                </TLayout>
+                <TFooter>Footer</TFooter>
+            </TLayout>
+        </div>
+
+
+        <div>
+            <TLayout>
+                <THeader>Header</THeader>
+                <TLayout Class="t-layout--with-sider">
+                    <TContent>Content</TContent>
+                    <TAside>Aside</TAside>
+                </TLayout>
+                <TFooter>Footer</TFooter>
+            </TLayout>
+        </div>
+
+        <div>
+            <TLayout Class="t-layout--with-sider">
+                <TAside>Aside</TAside>
+                <TLayout>
+                    <THeader>Header</THeader>
+                    <TContent>Content</TContent>
+                    <TFooter>Footer</TFooter>
+                </TLayout>
+            </TLayout>
+        </div>
+    </div>
 </TCard>
+<style>
+    .t-layout > header {
+        background: var(--td-brand-color-4);
+        color: #fff;
+        text-align: center;
+        height: 64px;
+        line-height: 64px;
+    }
+
+    .t-layout > main {
+        background: var(--td-brand-color-5);
+        color: #fff;
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+    }
+
+    .t-layout > footer {
+        min-height: 46px;
+        text-align: center;
+        color: #fff;
+        background: var(--td-brand-color-4);
+        font-size: var(--td-font-size-body-large);
+    }
+
+    .tdesign-demo-item--base > div {
+        margin: 10px;
+    }
+
+    section > section {
+        flex-direction: row;
+    }
+
+    section > .t-layout__sider {
+        text-align: center;
+        font-size: var(--td-font-size-body-large);
+        line-height: 100px;
+        background-color: var(--td-brand-color-6);
+        color: #fff;
+        font-size: var(--td-font-size-body-large);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
 @code {
 

@@ -1,7 +1,16 @@
 ﻿@namespace TDesign.Component
 @using TDesign.Core.Base
 @inherits TDesignComponentBase
-<div class="t-space t-space-@Direction" style="gap: 16px; width: 100%; text-align: @Align;" >@ChildContent</div>
+@{
+    var classString = "";
+    if (BreakLine && Direction == "horizontal")
+    {
+          classString = "flex-wrap: wrap;";
+    }
+   
+}
+<div class="t-space t-space-@Direction" style="gap: 16px; width: 100%; text-align: @Align; @classString">@ChildContent</div>
+
 @code {
     [Parameter]
     public string Align { get; set; } = "center";
