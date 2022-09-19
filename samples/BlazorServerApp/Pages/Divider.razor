@@ -1,0 +1,81 @@
+﻿@page "/Divider"
+<h3>Divider</h3>
+
+<TCard>
+    <div :style="{ width: '200px' }">
+        <span>正直</span>
+        <TDivider>TDesign</TDivider>
+        <span>进取</span>
+        <TDivider>TDesign</TDivider>
+        <span>合作</span>
+        <TDivider>TDesign</TDivider>
+        <span>创新</span>
+    </div>
+</TCard>
+
+
+<h3>基础分割线</h3>
+<p>基础分割线是没有文字的独立线条，又分为水平分割线和垂直分割线。</p>
+
+
+<h4>水平分割线</h4>
+<p>水平分割线常用来对不同元素内容进行分割。</p>
+
+
+<TCard>
+    <TSpace Direction="vertical">
+        <p>
+            这是第一种类型的内容元素或信息数据，通过分割线进行分割。分割线方便用户清晰明确的读取和预览，减少信息符合，提高用户使用效率。避免大段内容的聚集、信息负荷过多，导致信息获取或内容操作效率降低。
+        </p>
+        <TDivider></TDivider>
+        <p>
+            这是第二种类型的内容元素或信息数据，通过分割线进行分割。分割线方便用户清晰明确的读取和预览，减少信息符合，提高用户使用效率。避免大段内容的聚集、信息负荷过多，导致信息获取或内容操作效率降低。
+        </p>
+        <TDivider Dashed=true></TDivider>
+        <p>
+            这是第三种类型的内容元素或信息数据，通过分割线进行分割。分割线方便用户清晰明确的读取和预览，减少信息符合，提高用户使用效率。避免大段内容的聚集、信息负荷过多，导致信息获取或内容操作效率降低。
+        </p>
+    </TSpace>
+</TCard>
+
+
+
+
+<h4>垂直分割线</h4>
+<p>垂直分割线常用来做行内分割。</p>
+<TCard>
+    <TSpace BreakLine>
+        <span>正直</span>
+        <TDivider Layout="vertical" />
+        <span>进取</span>
+        <TDivider Layout="vertical" />
+        <span>协作</span>
+        <TDivider Layout="vertical" Dashed=true />
+        <span>创造</span>
+    </TSpace>
+</TCard>
+<h4>带文字的分割线</h4>
+<p>带文字的分割线是在分割线中嵌入文字，在需要对分割内容进行解释说明时使用。</p>
+<TCard>
+    <TSpace Direction="vertical">
+        <p>
+            这是第一种类型的内容元素或信息数据，通过分割线进行分割。分割线方便用户清晰明确的读取和预览，减少信息符合，提高用户使用效率。避免大段内容的聚集、信息负荷过多，导致信息获取或内容操作效率降低。
+        </p>
+        <TDivider Align="left">TDesign</TDivider>
+        <p>
+            这是第二种类型的内容元素或信息数据，通过分割线进行分割。分割线方便用户清晰明确的读取和预览，减少信息符合，提高用户使用效率。避免大段内容的聚集、信息负荷过多，导致信息获取或内容操作效率降低。
+        </p>
+        <TDivider Align="center" Dashed=true>TDesign</TDivider>
+        <p>
+            这是第三种类型的内容元素或信息数据，通过分割线进行分割。分割线方便用户清晰明确的读取和预览，减少信息符合，提高用户使用效率。避免大段内容的聚集、信息负荷过多，导致信息获取或内容操作效率降低。
+        </p>
+        <TDivider Align="right" Dashed=true>TDesign</TDivider>
+        <p>
+            这是第四种类型的内容元素或信息数据，通过分割线进行分割。分割线方便用户清晰明确的读取和预览，减少信息符合，提高用户使用效率。避免大段内容的聚集、信息负荷过多，导致信息获取或内容操作效率降低。
+        </p>
+    </TSpace>
+</TCard>
+
+@code {
+
+}

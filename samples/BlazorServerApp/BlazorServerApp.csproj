@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-	  <TargetFramework>net6</TargetFramework>
+    <TargetFramework>net6</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,11 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TDesignBlazor.6x\TDesignBlazor.6x.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\tdesign-vue%400.46.4\dist\" />
+    <ProjectReference Include="..\..\src\TDesign\TDesign.csproj" />
   </ItemGroup>
 
 

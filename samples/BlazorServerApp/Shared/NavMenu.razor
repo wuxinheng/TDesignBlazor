@@ -1,5 +1,5 @@
 ﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">TDesignBlazor</a>
+    <a class="navbar-brand" href="">TDesign</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,30 +8,64 @@
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <ul class="nav flex-column">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+            <NavLink class="nav-link" href="/" Match="NavLinkMatch.All">
+                关于
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="button">
-                <span class="oi oi-plus" aria-hidden="true"></span> Button
+            <NavLink class="nav-link">
+                基础
+            </NavLink>
+            <ul class="nav flex-column">
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="button">
+                        Button 按钮
+                    </NavLink>
+
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="icon">
+                        Icon 图标
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="link">
+                        Link 链接
+                    </NavLink>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item px-3">
+            <NavLink class="nav-link">
+                布局
+            </NavLink>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="divider">
+                Divider 分割线
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="grid">
+                Grid 栅格
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="Layout">
+                Layout 布局
             </NavLink>
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="space">
-                <span class="oi oi-plus" aria-hidden="true"></span> Space
+                Space 间距
             </NavLink>
         </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="card">
-                <span class="oi oi-plus" aria-hidden="true"></span> Card
-            </NavLink>
+
+
+
         </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="icon">
-                <span class="oi oi-plus" aria-hidden="true"></span> Icon
-            </NavLink>
-        </li>
+
+
     </ul>
 </div>
 

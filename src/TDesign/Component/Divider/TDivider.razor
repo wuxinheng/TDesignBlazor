@@ -1,0 +1,31 @@
+﻿@namespace TDesign.Component
+
+@using TDesign.Core.Base
+@inherits TDesignComponentBase   
+
+@{
+    var classString = "";
+    if (Dashed)
+    {
+        classString += "t-divider--dashed";
+    }
+}
+
+<div class="t-divider t-divider--@Layout t-divider--with-text t-divider--with-text-@Align @classString">
+    <span class="t-divider__inner-text">@ChildContent</span>
+</div>
+
+@code {
+    [Parameter]
+    public string Align { get; set; } = "center";
+    [Parameter]
+    public string Content { get; set; }
+    [Parameter]
+    public bool Dashed { get; set; } = false;
+    [Parameter]
+    public string @Default { get; set; }
+    [Parameter]
+    public string Layout { get; set; } = "horizontal";
+    [Parameter]
+    public string Theme { get; set; } = "horizontal";
+}
