@@ -98,6 +98,13 @@ namespace TDesign.Component
             }
         }
 
+        //RenderFragment GetRenderFragment()
+        //{
+        //    if (ChildContent.GetHashCode() == 0)
+        //    {
+        //    }
+        //}
+
     }
 
 }
